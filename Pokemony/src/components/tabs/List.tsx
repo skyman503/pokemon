@@ -100,13 +100,6 @@ function getPokemonIdFromPokedexData(data) {
   console.log(data.split('/'));
 }
 
-export interface PokemonDetails {
-  name: string;
-  height: number;
-  weight: number;
-  image: string;
-}
-
 class PokemonInPokedex {
   name: string;
   url: string;

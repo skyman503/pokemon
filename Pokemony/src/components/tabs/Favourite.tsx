@@ -24,13 +24,42 @@ function FavouriteTab() {
   const hasFavouritePokemon = favPokemon !== null;
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {hasFavouritePokemon ? (
-        <FavouriteDetails favPokemon={favPokemon}></FavouriteDetails>
-      ) : (
-        <Text>You currrently don't have favourite pokemon.</Text>
-      )}
-    </View>
+    <>
+      <View
+        style={{
+          backgroundColor: '#8BE0DA',
+          height: '30%',
+          width: '100%',
+          borderBottomEndRadius: 40,
+          borderBottomStartRadius: 40,
+          zIndex: 1,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: '#FFCFB8',
+          height: '100%',
+          width: '100%',
+          zIndex: 0,
+          position: 'absolute',
+        }}
+      />
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'absolute',
+          alignSelf: 'center',
+          zIndex: 2,
+        }}
+      >
+        {hasFavouritePokemon ? (
+          <FavouriteDetails favPokemon={favPokemon}></FavouriteDetails>
+        ) : (
+          <Text>You currrently don't have favourite pokemon.</Text>
+        )}
+      </View>
+    </>
   );
 }
 

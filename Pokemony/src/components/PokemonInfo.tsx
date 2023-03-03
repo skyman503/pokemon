@@ -69,12 +69,7 @@ function PokemonInfo(props) {
   };
 
   const setAsFavourite = () => {
-    storeData({
-      name: props.pokemon.name,
-      height: props.pokemon.height,
-      weight: props.pokemon.weight,
-      image: props.pokemon.sprites.front_default,
-    });
+    storeData({ pokemon: props.pokemon });
     closeModal();
   };
 
