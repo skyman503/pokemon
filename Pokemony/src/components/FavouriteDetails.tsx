@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
 import { Image, Text, View, StyleSheet, Button } from 'react-native';
-import { storeData } from './tabs/List';
+import { storeData, PokemonDetails } from './tabs/List';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 type FavouriteDetailsProps = {
-  favPokemon: object;
+  favPokemon: PokemonDetails;
 };
 
 function FavouriteDetails(props: FavouriteDetailsProps) {
